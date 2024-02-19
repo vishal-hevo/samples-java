@@ -43,8 +43,7 @@ public class IncrementalStarter {
         client.newWorkflowStub(IncrementalWorkflow.class, workflowOptions);
 
     WorkflowExecution workflowExecution = WorkflowClient.start(workflow::execute, INTEGRATION_ID);
-    System.out.println(workflowExecution.getWorkflowId());
-    System.out.println(workflowExecution.getRunId());
+    System.out.println(workflowExecution.toString());
     System.exit(0);
   }
 }
